@@ -29,6 +29,13 @@
             {
               "client_id": "167414078992-7sk23fldgs0ti6qpfrr0b8ibitg5p8q7.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "167414078992-k2iakh60camqjloq4ajc1uma9vc9qbgj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterStarterRiverpod"
+              }
             }
           ]
         }
