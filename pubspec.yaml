@@ -38,6 +38,7 @@ dependencies:
   hive_flutter: ^1.1.0
   auto_route: ^5.0.1
   http: ^0.13.5
+  firebase_core: ^1.22.0
 
 dev_dependencies:
   flutter_test:
