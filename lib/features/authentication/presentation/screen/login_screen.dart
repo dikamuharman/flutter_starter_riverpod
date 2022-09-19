@@ -20,7 +20,7 @@ class LoginScreen extends HookConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Login',
+                  'Sign in',
                   style: theme.textTheme.headline3
                       ?.copyWith(color: Colors.black87),
                 ),
