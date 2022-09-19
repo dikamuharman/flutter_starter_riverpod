@@ -17,31 +17,53 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
-    HomeRoute.name: (routeData) {
+    Splash.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const HomeScreen(),
+        child: const SplashScreen(),
       );
-    }
+    },
+    Login.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const LoginScreen(),
+      );
+    },
   };
 
   @override
   List<RouteConfig> get routes => [
         RouteConfig(
-          HomeRoute.name,
+          Splash.name,
           path: '/',
-        )
+        ),
+        RouteConfig(
+          Login.name,
+          path: '/login',
+        ),
       ];
 }
 
 /// generated route for
-/// [HomeScreen]
-class HomeRoute extends PageRouteInfo<void> {
-  const HomeRoute()
+/// [SplashScreen]
+class Splash extends PageRouteInfo<void> {
+  const Splash()
       : super(
-          HomeRoute.name,
+          Splash.name,
           path: '/',
         );
 
-  static const String name = 'HomeRoute';
+  static const String name = 'Splash';
+}
+
+/// generated route for
+/// [LoginScreen]
+class Login extends PageRouteInfo<void> {
+  const Login()
+      : super(
+          Login.name,
+          path: '/login',
+        );
+
+  static const String name = 'Login';
 }
