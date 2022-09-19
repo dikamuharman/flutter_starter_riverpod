@@ -29,6 +29,12 @@ class _$AppRouter extends RootStackRouter {
         child: const LoginScreen(),
       );
     },
+    Register.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const RegisterScreen(),
+      );
+    },
   };
 
   @override
@@ -40,6 +46,10 @@ class _$AppRouter extends RootStackRouter {
         RouteConfig(
           Login.name,
           path: '/login',
+        ),
+        RouteConfig(
+          Register.name,
+          path: '/register',
         ),
       ];
 }
@@ -66,4 +76,16 @@ class Login extends PageRouteInfo<void> {
         );
 
   static const String name = 'Login';
+}
+
+/// generated route for
+/// [RegisterScreen]
+class Register extends PageRouteInfo<void> {
+  const Register()
+      : super(
+          Register.name,
+          path: '/register',
+        );
+
+  static const String name = 'Register';
 }

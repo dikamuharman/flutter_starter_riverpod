@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter_riverpod/features/authentication/presentation/widgets/login_form_widget.dart';
+import 'package:flutter_starter_riverpod/features/authentication/presentation/widgets/register_form_widget.dart';
 import 'package:flutter_starter_riverpod/shared/configs/provider.dart';
-import 'package:flutter_starter_riverpod/shared/configs/router/app_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class LoginScreen extends HookConsumerWidget {
-  const LoginScreen({Key? key}) : super(key: key);
-
+class RegisterScreen extends HookConsumerWidget {
+  const RegisterScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(routerProvider);
@@ -23,14 +21,14 @@ class LoginScreen extends HookConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Sign in',
+                  'Register',
                   style: theme.textTheme.headline3
                       ?.copyWith(color: Colors.black87),
                 ),
                 SizedBox(
                   height: size.height * 0.055,
                 ),
-                LoginFormWidget(),
+                RegisterFormWidget(),
                 SizedBox(
                   height: size.height * 0.015,
                 ),
@@ -66,12 +64,10 @@ class LoginScreen extends HookConsumerWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Dont have account ?'),
+                    Text('Already have account ?'),
                     TextButton(
-                      onPressed: () => router.push(
-                        const Register(),
-                      ),
-                      child: Text('Sign up'),
+                      onPressed: () => router.pop(),
+                      child: Text('Sign in'),
                     ),
                   ],
                 )
